@@ -33,7 +33,7 @@ class AccountManager(BaseUserManager):
     def create_user(self, username, first_name, last_name, email,
             password=None, **extra_fields):
         return self._create_user(username, password, first_name, last_name,
-                False, False, **extra_fields)
+                email, False, False, **extra_fields)
 
     def create_superuser(self, username, first_name, last_name, email,
             password, **extra_fields):
@@ -66,6 +66,9 @@ class Account(AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = 'Accounts'
 
     def __unicode__(self):
+        return self.username
+
+    def __str__(self):
         return self.username
 
     def get_full_name(self):
