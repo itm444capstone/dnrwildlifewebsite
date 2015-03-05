@@ -1,6 +1,7 @@
 import datetime
 from django.db import models
 
+
 # Create your models here.
 class Alert(models.Model):
     title = models.CharField(max_length=50)
@@ -15,8 +16,8 @@ class Alert(models.Model):
         verbose_name_plural = "Alerts"
 
     def save(self, *args, **kwargs):
-        if self.published and not self.published_date:
-            self.published_date = datetime.now()
+        if self.published and not self.publish_date:
+            self.publish_date = datetime.datetime.now()
 
         super(Alert, self).save(*args, **kwargs)
 

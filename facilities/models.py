@@ -1,9 +1,9 @@
 from django.db import models
 
 # Create your models here.
-class Facilities(models.Model):
+class Facility(models.Model):
     name = models.CharField(max_length=50)
-    icon = models.ImageField()
+    icon = models.ImageField(upload_to="icons/")
 
     class Meta:
         verbose_name = "Facility"
