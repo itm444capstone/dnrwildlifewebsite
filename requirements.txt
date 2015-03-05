@@ -1,3 +1,4 @@
 # Django Requirements
 django
 djangorestframework
+Pillow
