@@ -21,7 +21,7 @@ class AccountManager(BaseUserManager):
         if not email:
             raise ValueError("Email must be filled in")
 
-        email = models.normalize_email(email)
+        email = self.normalize_email(email)
         user = self.model(username=username, email=email,
                 first_name=first_name, last_name=last_name,
                 is_active=True, is_staff=is_staff,
@@ -38,7 +38,7 @@ class AccountManager(BaseUserManager):
     def create_superuser(self, username, first_name, last_name, email,
             password, **extra_fields):
         return self._create_user(username, password, first_name, last_name,
-                True, True, **extra_fields)
+                email, True, True, **extra_fields)
 
 
 class Account(AbstractBaseUser, PermissionsMixin):

@@ -36,7 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Users',
+    'users',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,7 +49,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-AUTH_USER_MODEL = 'Users.Account'
+AUTH_USER_MODEL = 'users.Account'
 
 ROOT_URLCONF = 'itm444.urls'
 
