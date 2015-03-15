@@ -2,3 +2,7 @@
 django
 djangorestframework
 Pillow
+psycopg2
+
+# Additional Requirements:
+gdal   # Make sure you have the gdal library installed
