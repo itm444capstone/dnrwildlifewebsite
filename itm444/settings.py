@@ -67,9 +67,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'capstone',
-        'USER': 'mrvadmin',
-        'PASSWORD': 'cgv4tr9v4xl5',
-        'HOST': '35.8.163.60',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': '5432'
     }
 }
